@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+//Route::get('/', function () {
+//    return view('homepage');
+//});
+
+Route::get('/', [HomeController::class , 'index'])->name('homepage');
+
+Route::get('/girisler', [HomeController::class , 'girisler'])->name('girisler');
+Route::post('/girisler', [HomeController::class , 'postgirisler'])->name('post.girisler');
+
+Route::get('/cikislar', [HomeController::class , 'cikislar'])->name('cikislar');
+Route::post('/cikislar', [HomeController::class , 'postcikislar'])->name('post.cikislar');
