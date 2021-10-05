@@ -62,7 +62,7 @@ https://templatemo.com/tm-563-seo-dream
             <ul class="nav">
               <li class="scroll-to-section"><a href="{{ route('homepage') }}" class="active">ANASAYFA</a></li>
               <li class="scroll-to-section"><a href="{{ route('girisler') }}">GİRİŞLER</a></li>
-              <li class="scroll-to-section"><a href="#about">ÇIKIŞLAR</a></li>
+              <li class="scroll-to-section"><a href="{{ route('cikislar') }}">ÇIKIŞLAR</a></li>
             </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -87,33 +87,37 @@ https://templatemo.com/tm-563-seo-dream
                     <h2>SEO &amp; Digital Marketing Agency</h2>
                   </div>
 
+                  <form action="{{ route('post.g')}}" method="post">
+                      @csrf
                   <div class="col-lg-6">
                     <fieldset>
-                      <input type="name" name="tc" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
+
+                      <input type="name" name="kimlik" class="form-control" id="tc" placeholder="TC Giriniz" autocomplete="off" required>
                     </fieldset>
                   </div>
                   <div class="col-lg-6">
-
-                 <form action="{{ route('pdksz.giris')}}" method="post">
-                     @csrf
                     <div class="main-green-button scroll-to-section">
-                      <a href="#contact">GİRİŞ</a>
-                    </div>
-                  </form>
 
+                      <button type="submit" class="btn btn-success" name="button">GİRİŞ</button>
+
+                    </div>
                   </div>
+                    </form>
                   <br><br>
                   <hr>
+                  <form action="{{ route('post.c')}}" method="post">
+                      @csrf
                   <div class="col-lg-6">
                     <fieldset>
-                      <input type="name" name="tc" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
+                      <input type="name" name="kimlik" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
                     </fieldset>
                   </div>
                   <div class="col-lg-6">
                     <div class="main-green-button scroll-to-section">
-                      <a href="#contact">ÇIKIŞ</a>
+                      <button type="submit" class="btn btn-success" name="button">ÇIKIŞ</button>
                     </div>
                   </div>
+                </form>
 
                 </div>
               </div>
