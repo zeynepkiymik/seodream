@@ -32,8 +32,6 @@ public function postg(Request $request)
       //return redirect()->back();
 
      $data['kisiler'] = Kisiler::where('tip' , 'giris')->get();
-
-
     return view('girisler', $data);
     }
 
