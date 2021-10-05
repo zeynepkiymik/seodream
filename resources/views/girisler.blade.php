@@ -62,7 +62,7 @@ https://templatemo.com/tm-563-seo-dream
             <ul class="nav">
               <li class="scroll-to-section"><a href="{{ route('homepage') }}" class="active">ANASAYFA</a></li>
               <li class="scroll-to-section"><a href="{{ route('girisler') }}">GİRİŞLER</a></li>
-              <li class="scroll-to-section"><a href="#about">ÇIKIŞLAR</a></li>
+              <li class="scroll-to-section"><a href="{{ route('cikislar')}} ">ÇIKIŞLAR</a></li>
             </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -76,28 +76,7 @@ https://templatemo.com/tm-563-seo-dream
   <!-- ***** Header Area End ***** -->
 
 
-  <div class="header-button">
 
-                   <table border="1" class="table ">
-
-                     <tr>
-                        <td> NO </td>
-                        <td> TC </td>
-                        <td> TYPE </td>
-                        <td> ZAMAN </td>
-                      </tr>
-
-                     @foreach ($pdksz as $key => $value)
-                       <tr>
-                     <td> {{$key+1 }} :</td>
-                     <td>  {{ $value->tc }}</td>
-                     <td>  {{ $value->type }}</td>
-                     <td>  {{ $value->tarih }}</td>
-                       </tr>
-                     @endforeach
-
-                   </table>
-                 </div>
 
 
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -108,32 +87,27 @@ https://templatemo.com/tm-563-seo-dream
             <div class="col-lg-6 align-self-center">
               <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
-                  <div class="col-lg-12">
-                    <h2>SEO &amp; Digital Marketing Agency</h2>
-                  </div>
+                  <div class="header-button">
 
-                  <div class="col-lg-6">
-                    <fieldset>
-                      <input type="name" name="tc" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="main-green-button scroll-to-section">
-                      <a href="#contact">GİRİŞ</a>
-                    </div>
-                  </div>
-                  <br><br>
-                  <hr>
-                  <div class="col-lg-6">
-                    <fieldset>
-                      <input type="name" name="tc" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="main-green-button scroll-to-section">
-                      <a href="#contact">ÇIKIŞ</a>
-                    </div>
-                  </div>
+                                   <table border="1" class="table table-dark">
+
+                                     <tr>
+                                        <td> NO </td>
+                                        <td> KİMLİK </td>
+                                        <td> TİP </td>
+                                        <td> ZAMAN </td>
+                                      </tr>
+                                  @foreach ($kisiler as $key => $value)
+
+                                     <td> {{$key+1 }} :</td>
+                                     <td>  {{ $value->kimlik }}</td>
+                                     <td>  {{ $value->tip }}</td>
+                                     <td>  {{ $value->zaman }}</td>
+                                       </tr>
+                                     @endforeach
+
+                                   </table>
+                                 </div>
 
                 </div>
               </div>
