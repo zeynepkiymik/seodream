@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +23,7 @@ use Illuminate\Http\Request;
 Route::get('/', [HomeController::class , 'index'])->name('homepage');
 
 Route::get('/girisler', [HomeController::class , 'girisler'])->name('girisler');
-Route::post('/girisler', [HomeController::class , 'postgirisler'])->name('post.girisler');
+Route::post('/girisler', [HomeController::class , 'postg'])->name('post.g');
 
 Route::get('/cikislar', [HomeController::class , 'cikislar'])->name('cikislar');
-Route::post('/cikislar', [HomeController::class , 'postcikislar'])->name('post.cikislar');
+Route::post('/cikislar', [HomeController::class , 'postc'])->name('post.c');
