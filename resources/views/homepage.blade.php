@@ -109,7 +109,7 @@ https://templatemo.com/tm-563-seo-dream
                       @csrf
                   <div class="col-lg-6">
                     <fieldset>
-                      <input type="name" name="kimlik" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
+                      <input type="name" name="kimlik" class="form-control" id="tc" placeholder="TC Giriniz" autocomplete="on" required>
                     </fieldset>
                   </div>
                   <div class="col-lg-6">
