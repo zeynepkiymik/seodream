@@ -67,6 +67,15 @@ https://templatemo.com/tm-563-seo-dream
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
+            <li class="nav-item ">
+              <a class="nav-link active"  >
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active"  >
+                {{ session('mesaj')}}
+              </a>
+            </li>
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
@@ -144,4 +153,12 @@ https://templatemo.com/tm-563-seo-dream
   <script src="assets/js/custom.js"></script>
 
 </body>
+<script type="text/javascript">
+var degis;
+$(document).ready( function(){
+  @if (session('mesaj'))
+    alert(" {{ session('mesaj')}} ")
+  @endif   //başka sayfada kutu içinde mesaj
+)});
+  </script>
 </html>
