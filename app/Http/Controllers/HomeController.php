@@ -7,7 +7,7 @@ use App\Models\Kisiler;
 
 class HomeController extends Controller
 {
-  public function index(){
+public function index(){
    return view('homepage');
 }
 public function girisler(){
@@ -28,10 +28,21 @@ public function postg(Request $request)
       $kayit->kimlik = $request->kimlik;
       $kayit->tip = "giris";
       $kayit->zaman = date("Y-m-d H:i:s");
-      $kayit->save();
+      if ( $kayit->save())
+      {
+         //$data['msg'] ="Kayıt edildi";
+         session('mesaj'  ,'Kayıt Edildi');
+      }
+      else {
+        //$data['msg'] ="Hata oluştu Code 001";
+        session('mesaj'  ,'Hata oluştu Code 001');
+
+
+      }
       //return redirect()->back();
 
-     $data['kisiler'] = Kisiler::where('tip' , 'giris')->get();
+      $data['kisiler'] = Kisiler::where('tip' , 'giris')->get();
+
     return view('girisler', $data);
     }
 
